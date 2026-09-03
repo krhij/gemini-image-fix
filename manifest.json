@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "Gemini Screenshot Renamer",
+  "version": "1.0",
+  "description": "Zmienia nazwę wklejanego obrazu w Gemini na unikalną.",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "gemini-screen-fix@twojanazwa.local",
+      "data_collection_permissions": {
+        "required": ["none"]
+      }
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://gemini.google.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_start"
+    }
+  ]
+}
